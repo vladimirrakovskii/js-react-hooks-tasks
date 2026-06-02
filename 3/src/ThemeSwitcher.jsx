@@ -5,7 +5,7 @@ import ThemeContext from './contexts';
 
 const ThemeSwitcher = () => {
   // BEGIN (write your solution here)
-
+const {theme, themes, setTheme} = useContext(ThemeContext);
   // END
 
   return (
