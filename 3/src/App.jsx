@@ -26,7 +26,15 @@ const themes = [
 
 const ThemeProvider = ({ children }) => {
   // BEGIN (write your solution here)
-
+  const [theme, setTheme] = useState(themes[0]);
+  const setWhiteTheme = () => setTheme(themes[0]);
+  const setBlackTheme = () => setTheme(themes[1]);
+  const setBlueTheme = () => setTheme(themes[2]);
+  return (
+      <ThemeContext.Provider value={{theme, setTheme, setWhiteTheme, setBlackTheme, setBlueTheme, themes}}>
+        {children}
+      </ThemeContext.Provider>
+  )
   // END
 };
 
